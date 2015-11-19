@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="myApp">
+    <head>
+        <title>Control de Inventario</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+        <link href="style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="./JS/jquery-1.9.1.min.js"></script>
+        <script src="./JS/angular.min.js"></script> 
+        <script src="./JS/angular-route.min.js"></script>
+        <script src="./JS/materialize/js/materialize.min.js"></script>
+        <script src="./JS/angular-route.min.js"></script>
+        <script src="app.js"></script>
+        <script src="mainController.js"></script>
+        
+    </head>
+    <body>
+
+        <header>
+            <invetario-nav></invetario-nav>
+		</header>
+             
+        <div class="container">
+            
+            <div ng-view id="ngview"></div>
+            
+		</div>
+
+    </body>
+</html>
