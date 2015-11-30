@@ -5,7 +5,7 @@ angular.module('myApp').controller('reportes_orden', ['$scope','$http','$locatio
     
 
     ctrl.init = function(){
-        var baseUrl = "http://fia.unitec.edu:8082/InventarioRedes/PHPOrder.php";
+        var baseUrl = "http://fia.unitec.edu:8082/InventarioRedes/phpFiles/getOrders.php";
         var request = {
                 method: 'GET',
                 url: baseUrl
