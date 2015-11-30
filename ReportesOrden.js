@@ -2,7 +2,7 @@ angular.module('myApp').controller('reportes_orden', ['$scope','$http','$locatio
 "http://fia.unitec.edu:8082/InventarioRedes/phpFiles/getInventory.php"
     var ctrl = this;
     $scope.Orders = [];
-    
+    $scope.Productos=[];
 
     ctrl.init = function(){
         var baseUrl = "http://fia.unitec.edu:8082/InventarioRedes/phpFiles/getOrders.php";
@@ -13,6 +13,7 @@ angular.module('myApp').controller('reportes_orden', ['$scope','$http','$locatio
         $http(request).then(function(response){
             $scope.Orders = response.data;
             for(var i=0;i<$scope.Orders.length;i++){
+                $scope.Orders[i].products["id_Order"]=$scope.Orders[0].order_number;
                 console.log($scope.Orders[i].products);
             }
             
