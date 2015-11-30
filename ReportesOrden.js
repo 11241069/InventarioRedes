@@ -13,7 +13,7 @@ angular.module('myApp').controller('reportes_orden', ['$scope','$http','$locatio
         $http(request).then(function(response){
             $scope.Orders = response.data;
             for(var i=0;i<$scope.Orders.length;i++){
-                console.log(Orders.get(i).products);
+                console.log($scope.Orders.get(i).products);
             }
             
             console.log($scope.Orders.length);
