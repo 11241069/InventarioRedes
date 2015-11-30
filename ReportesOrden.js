@@ -13,14 +13,16 @@ angular.module('myApp').controller('reportes_orden', ['$scope','$http','$locatio
         $http(request).then(function(response){
             $scope.Orders = response.data;
             for(var i=0;i<$scope.Orders.length;i++){
-                $("#GG").find('tbody')
-                    .append($('<tr>')
-                        .append($('<td>')
-                            .append($scope.Orders[i].order_number)
-                        )
-                    );
+                for(var j=0;j<$scope.Orders[i].Productos;j++){
+                    $("#GG").find('tbody')
+                        .append($('<tr>')
+                            .append($('<td>')
+                                .append($scope.Orders[i].order_number)
+                            )
+                        );
+                }
             }
-            
+            console.log($scope.Orders);
             console.log($scope.Orders.length);
             //console.log(response.data);
         });
