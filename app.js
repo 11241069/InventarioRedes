@@ -15,6 +15,11 @@ myApp.config(function ($routeProvider) {
         templateUrl: 'CrearProducto.html',
         controller: 'mainController'
     })
+    .when('/reporterorden',{
+        templateUrl: 'ReportesOrden.html',
+        controller: 'mainController'
+        
+    })
 });
 myApp.directive('invetarioNav', [function() {
   return {
