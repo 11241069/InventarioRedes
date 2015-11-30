@@ -9,13 +9,12 @@
         <tr>
           <th>Nombre del Producto</th><th>Categoria</th><th>Cantidad Actual</th><th>Cantidad Pasada</th>
         </tr>
-        <tr ng-repeat="item in Productos" value="{{item.inventory_id}}"ng-click="search(item)">
-                               <td >{{item.product_name}}</td>
-                               <td >{{item.category_name}}</td>
-                               <td >{{item.quantity}}</td>
-                               <td >{{item.past_quantity}}</td>
-                      <td><i class="small material-icons">toc</i></td>
-                  </tr>
+            <tr ng-repeat="item in Productos" value="{{item.inventory_id}}">
+                                   <td >{{item.product_name}}</td>
+                                   <td >{{item.category_name}}</td>
+                                   <td >{{item.quantity}}</td>
+                                   <td >{{item.past_quantity}}</td>
+            </tr>
     </table>
     </form>
 </div>

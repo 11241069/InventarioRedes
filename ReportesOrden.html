@@ -4,29 +4,20 @@
         <li class="tab col s3 active brown-text text-lighten-3" id="li-inventario"><a href="#/reporterorden">Orden de Compra</a></li>
         <li class="tab col s3 brown-text text-lighten-1" id="li-inventario"><a href="#/reportes">Inventario</a></li>
      </ul>
-    
+    <form ng-controller="reportes_orden">
     <table class="striped">
         <tr>
-          <th>Nombre del Producto</th><th>Categoria</th>
+          <th>Numero de Orden</th><th>Nombre del Producto</th><th>Valor</th><th>Cantidad</th><th>Date</th>
         </tr>
-        <tr>
-            <td>Leche Sula</td>
-            <td>Lacteos</td>
-            <td>32</td>
-        
         </tr>
-        <tr>
-            <td>Leche Leyde</td>
-            <td>Lacteos</td>
-            <td>12</td>
-        
-        </tr>
-        <tr>
-            <td>Leche Zamorano</td>
-            <td>Lacteos</td>
-            <td>42</td>
-        
-        </tr>
+            <tr ng-repeat="item in Orders" value="{{item.order_id}}">
+                    <td>{{item.order_number}}</td>
+                    <td>{{item.product_name}}</td>
+                    <td>{{item.purchase_price}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td>{{item.order_date}}</td>
+                   
+            </tr>
     </table>
-
+    </form>
 </div>  
