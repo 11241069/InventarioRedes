@@ -3,8 +3,7 @@ angular.module('myApp').controller('crearproducto', ['$scope','$http','$location
     
         var path = $location.path($location.path());
 		//Creating the baseUrl
-		var baseUrl = "http://fia.unitec.edu:8082/InventarioRedes/phpFiles/insertProducto.php"
-';
+		var baseUrl = "http://fia.unitec.edu:8082/InventarioRedes/phpFiles/insertProducto.php";
         
 var request = {
 			method: 'POST',
