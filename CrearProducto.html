@@ -6,25 +6,29 @@
         
       
           <div class="row">
-            <form class="col s12" ng-submit="submit()"ng-controller="crearexpediente">
+            <form class="col s12" ng-submit="submit()"ng-controller="crearproducto">
                  <div class="row">
                      <div class="input-field col s6">
-                          <input id="nombreProducto" type="text" class="validate" ng-model="nombre">
-                          <label for="nombreRepresentante">Nombre del Producto<span id="asterisco"> *</span></label>
+                         <input id="Barcode" type="text" class="validate" ng-model="barcode">
+                          <label for="Barcode">Barcode<span id="asterisco"> *</span></label>
+                     </div>
+                     <div class="input-field col s6">
+                          <input id="nombre" type="text" class="validate" ng-model="nombre">
+                          <label for="nombre">Nombre del Producto<span id="asterisco"> *</span></label>
                     </div>
                     
                     
                      <div class="input-field col s6">
-                          <input id="nombreRepresentante" type="text" class="validate" ng-model="responsable">
-                          <label for="nombreRepresentante">Nombre Categoria<span id="asterisco" > *</span></label>
+                          <input id="nombrec" type="text" class="validate" ng-model="categoria">
+                          <label for="nombrec">Nombre Categoria<span id="asterisco" > *</span></label>
                     </div>
                      <div class="input-field col s6">
-                          <input id="nombreRepresentante" type="text" class="validate" ng-model="responsable">
-                          <label for="nombreRepresentante">Cantidad<span id="asterisco" > *</span></label>
+                          <input id="purch" type="text" class="validate" ng-model="purch">
+                          <label for="purch">Purch<span id="asterisco" > *</span></label>
                     </div>
                      <div class="input-field col s6">
-                          <input id="nombreRepresentante" type="text" class="validate" ng-model="responsable">
-                          <label for="nombreRepresentante">Fecha de Ingreso<span id="asterisco" > *</span></label>
+                          <input id="sell" type="text" class="validate" ng-model="sell">
+                          <label for="sell">sell<span id="asterisco" > *</span></label>
                     </div>
                   </div>
                   <br><br>
