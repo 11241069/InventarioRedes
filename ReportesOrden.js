@@ -13,11 +13,31 @@ angular.module('myApp').controller('reportes_orden', ['$scope','$http','$locatio
         $http(request).then(function(response){
             $scope.Orders = response.data;
             for(var i=0;i<$scope.Orders.length;i++){
-                for(var j=0;j<$scope.Orders[i].Productos;j++){
+                for(var j=0;j<$scope.Orders[i].products.length;j++){
                     $("#GG").find('tbody')
                         .append($('<tr>')
                             .append($('<td>')
                                 .append($scope.Orders[i].order_number)
+                                
+                            )
+                            .append($('<td>')
+                                
+                                .append($scope.Orders[i].products[j].product_name)
+                                
+                            )
+                            .append($('<td>')
+                                
+                                .append($scope.Orders[i].products[j].purchase_price)
+                                
+                            )
+                            .append($('<td>')
+                                
+                                .append($scope.Orders[i].products[j].quantity)    
+                                
+                            )
+                            .append($('<td>')
+                                 
+                                .append($scope.Orders[i].order_date)
                             )
                         );
                 }
