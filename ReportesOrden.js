@@ -13,8 +13,12 @@ angular.module('myApp').controller('reportes_orden', ['$scope','$http','$locatio
         $http(request).then(function(response){
             $scope.Orders = response.data;
             for(var i=0;i<$scope.Orders.length;i++){
-                $scope.Orders[i].products["id_Order"]=$scope.Orders[i].order_number;
-                console.log($scope.Orders[i].products);
+                $("#GG").find('tbody')
+                    .append($('<tr>')
+                        .append($('<td>')
+                            .append($scope.Orders[i].order_number)
+                        )
+                    );
             }
             
             console.log($scope.Orders.length);
